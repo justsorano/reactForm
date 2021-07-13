@@ -4,14 +4,6 @@ import PropsTypes from  'prop-types'
 
 
 function Form({Adder}){
-   const styles = {
-   container:{
-         display:"flex",
-         margin:'25px 25px',
-         flexDirection:'row',
-         justifyContent:'center',
-      }
-}
 const [name,setName] = useState('')
 const [age,setAge] = useState('')
 
@@ -31,14 +23,16 @@ function sumbitHandler(event){
 
 }
 return (
-   <form onSubmit={sumbitHandler} style={styles.container}>
-      <label>User Name
-      <input value={name} onChange={event => Name(event)} required ></input>
-      </label>
-      <label>User Age 
-      <input type="number" value={age} onChange={ event => Age(event)} required></input>
-      </label>
-      <button type="submit">Submit</button>
+   <form onSubmit={sumbitHandler} className='Form__content'>
+      <div className='form__container'>
+      <label className='Form__label'>User Name:</label>
+      <input className='Form__input' value={name} onChange={event => Name(event)} required ></input>
+      </div>
+      <div className='form__container'>
+      <label className='Form__label'>User Age:</label>
+      <input className='Form__input' type="number" value={age} onChange={ event => Age(event)} required></input>
+      </div>
+      <button className='Form__btn btn' type="submit">Submit</button>
    </form>
 )
 }

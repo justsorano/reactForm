@@ -6,10 +6,9 @@ function Base({people}){
 
    
    return (
-      <div className='Base__content'>
-         <h2>Data Base</h2>
+      <div className='DataBase__content'>
          {people.map((person,idx) =>{
-            return <Item person={person} index={idx} key={idx}/>
+            return <Item className='DataBase__item item' person={person} index={idx} key={idx}/>
          })}
       </div>
    )
