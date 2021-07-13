@@ -2,14 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-function ClearBase(){
+function ClearBase({Cleaner}){
    return(
       <div className="DataBase__clear clear" >
-         <div className='clear__content'>
-            <button>Clear Base</button>
-         </div>
+         <form className='clear__content'>
+            <button className='btn' type='submit' onClick={() => Cleaner()}>Clear Base</button>
+         </form>
       </div>
    )
 }
-
+ClearBase.propTypes = {
+   Cleaner: PropTypes.func.isRequired
+}
 export default ClearBase

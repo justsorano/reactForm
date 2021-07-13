@@ -23,8 +23,9 @@ function App() {
     ])
   localStorage.setItem('people',JSON.stringify(local))
   }
-  const base = document.querySelector('.DataBase__content')
-
+  function ClearBase(){
+    localStorage.setItem('people',JSON.stringify([]))
+  }
   return (
     <div className='container' >
       <div className='wrapper'>
@@ -32,10 +33,10 @@ function App() {
         <h1>React form</h1>
         </header>
         <section className='Form'>
-        <Form Adder={addPeople}/>
+        <Form Adder={addPeople} Cleaner={ClearBase}/>
         </section>
       <section className='DataBase'>
-      <button className="DataBase__header" >Data Base</button>
+      <h2 className="DataBase__header">Data Base</h2>
       <Base people={local}/>
       </section>
       </div>

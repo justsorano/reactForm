@@ -50,8 +50,12 @@ body {
   font-size: 20px;
   font-weight: 500;
 }
+.Form__btns{
+  margin: 20px 95px 0 0;
+}
 .Form__btn{
-  margin: 25px 120px 25px 0;
+  margin: 0 10px 0 10px;
+  width: 168px;
 }
 .DataBase{
 
@@ -65,7 +69,6 @@ body {
   flex-flow: wrap;
   max-width: 750px;
   margin: 50px 0;
-  border: 5px solid black;
   color: white;
 }
 .DataBase__header{
@@ -107,4 +110,10 @@ body {
 .btn:hover{
   padding: 10px 25px;
   box-shadow: 3px 5px 5px black;
+}
+.DataBase__clear{
+  margin: 30px 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
